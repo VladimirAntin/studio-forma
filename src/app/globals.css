@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+/* Studio Forma — dizajn enterijera paleta */
+@theme {
+    --color-primary: #c9a870;
+    --color-primary-dark: #ad8e55;
+    --color-secondary: #87a090;
+    --color-secondary-dark: #6e8878;
+    --color-accent: #f7f2ec;
+    --color-accent-dark: #e8d9c6;
+
+    /* Neutral warm tones */
+    --color-warm-dark: #0c0a07;
+    --color-warm-light: #f7f2ec;
+    --color-warm-mid: #c4b5a0;
+}
+
+/* Scroll margin for sticky top navbar */
+[id] {
+    scroll-margin-top: 72px;
+}
+
+@media (max-width: 767px) {
+    [id] {
+        scroll-margin-top: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
