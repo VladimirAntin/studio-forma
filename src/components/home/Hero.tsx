@@ -3,6 +3,7 @@ import {FC, memo, ReactNode, useEffect, useState} from 'react';
 import Link from 'next/link';
 import {cn} from '@utils/CN';
 import WaveDivider from '@/components/WaveDivider';
+import {motion} from 'framer-motion';
 
 const SLIDES = [
   {
