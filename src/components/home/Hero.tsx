@@ -3,7 +3,6 @@ import {FC, memo, ReactNode, useEffect, useState} from 'react';
 import Link from 'next/link';
 import {cn} from '@utils/CN';
 import WaveDivider from '@/components/WaveDivider';
-import {motion} from 'framer-motion';
 
 const SLIDES = [
   {
@@ -183,33 +182,6 @@ const Hero = () => {
           {SLIDES[current].label}
         </motion.p>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.a
-        href={'#services'}
-        aria-label={'Skroluj dole'}
-        className={
-          'absolute bottom-28 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2'
-        }
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{delay: 1.4, duration: 0.6}}>
-        <motion.div
-          className={
-            'flex h-10 w-6 items-start justify-center rounded-full border border-white/20 pt-1.5'
-          }
-          animate={{opacity: [0.4, 0.9, 0.4]}}
-          transition={{duration: 2.5, repeat: Infinity, ease: 'easeInOut'}}>
-          <motion.div
-            className={'bg-primary h-1.5 w-1 rounded-full'}
-            animate={{y: [0, 12, 0]}}
-            transition={{duration: 2.5, repeat: Infinity, ease: 'easeInOut'}}
-          />
-        </motion.div>
-        <span className={'text-[9px] font-medium tracking-[0.3em] text-white/30 uppercase'}>
-          {'Istraži'}
-        </span>
-      </motion.a>
 
       <WaveDivider fill={'#0c0a07'} />
     </section>
